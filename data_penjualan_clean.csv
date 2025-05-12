@@ -1,0 +1,5 @@
+tanggal,produk,quantity,harga,region,first_name,last_name,full_name,total_harga,tanggalstr
+2024-01-01,Laptop,5,10000000,Jakarta ,yuswita,sri,yuswita sri,50000000,01 January 2024
+2024-01-02,Smartphone,10,50000000,Bandung,indri,indriana,indri indriana,500000000,02 January 2024
+2024-01-03,Mouse,20,200000,Jakarta ,arfah,maul,arfah maul,4000000,03 January 2024
+,Keyboard,15,300000,Surabaya,yesi,sop,yesi sop,4500000,
