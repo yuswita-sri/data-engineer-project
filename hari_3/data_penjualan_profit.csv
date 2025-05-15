@@ -1,0 +1,11 @@
+tanggal,produk,quantity,harga,region,first_name,last_name,full_name,total_harga,kategori,harga_beli,profit
+2024-01-01,Laptop,5,10000000,Jakarta ,yuswita,sri,yuswita sri,50000000,Elektronik,8000000,10000000
+2024-02-02,Smartphone,10,50000000,Bandung,indri,indriana,indri indriana,500000000,Elektronik,4000000,460000000
+2024-03-03,Mouse,20,200000,Jakarta ,arfah,maul,arfah maul,4000000,Aksesori,150000,1000000
+2024-04-12,Laptop,5,10000000,Jakarta ,yuswita,sri,yuswita sri,50000000,Elektronik,8000000,10000000
+2024-05-16,Smartphone,10,50000000,Bandung,indri,indriana,indri indriana,500000000,Elektronik,4000000,460000000
+2024-06-03,Mouse,20,200000,Jakarta ,arfah,maul,arfah maul,4000000,Aksesori,150000,1000000
+2024-07-01,Laptop,5,10000000,Jakarta ,yuswita,sri,yuswita sri,50000000,Elektronik,8000000,10000000
+2024-08-20,Smartphone,10,50000000,Bandung,indri,indriana,indri indriana,500000000,Elektronik,4000000,460000000
+2024-09-03,Mouse,20,200000,Jakarta ,arfah,maul,arfah maul,4000000,Aksesori,150000,1000000
+2024-10-01,Laptop,5,10000000,Jakarta ,yuswita,sri,yuswita sri,50000000,Elektronik,8000000,10000000
