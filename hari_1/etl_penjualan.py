@@ -1,32 +1,31 @@
 import pandas as pd
 
-# 1. ekstract data dari Excel
-df = pd.read_csv("stores-data-set.csv", sep=';')
+## 1. ekstract data dari Excel
+data = pd.read_csv("stores-data-set.csv", sep=';')
 print("Data Asli")
-print(df.head())
+print(data.head())
 
-# 2. Transform = membersihkan data
+## 2. Transform = membersihkan data
 # - hapus duplikasi data
-df = df.drop_duplicates()
+data = data.drop_duplicates()
+
+# - hapus data kosong
+data = data.dropna()
 
 # - tambah kolom baru
-df['full_name'] = df['first_name'] + ' ' + df['last_name']
-df['total_harga'] = df['quantity']*df['harga']
-
-# ubah format tanggal
-df['tanggal'] = pd.to_datetime(df['tanggal'], format='%d/%m/%Y', errors='coerce')
-df['tanggalstr'] = df['tanggal'].dt.strftime('%d %B %Y')
+data['full_name'] = data['first_name'] + ' ' + data['last_name']
+data['total_harga'] = data['quantity']*data['harga']
+data['total_per_produk'] = data.groupby('produk')['total_harga'].transform('sum')
 
 print("\nData Baru : ")
-print(df.head())
+print(data.head())
 
-# 3. Data load ke CSV
-df.to_csv('data_penjualan_clean.csv', index=False)
+## 3. Data load ke CSV
+data.to_csv('data_penjualan_clean.csv', index=False)
 
 # ke SQLite (db sederhana)
 import sqlite3
 conn = sqlite3.connect('database_penjualan.db')
-df.to_sql('penjualan', conn, if_exists='replace', index=False)
+data.to_sql('penjualan', conn, if_exists='replace', index=False)
 conn.close()
-
 print("Data behasil disimpan ke database sederhana")
